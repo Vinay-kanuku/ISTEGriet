@@ -1,0 +1,16 @@
+.container5 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+ width: 75%;
+}
+
+
+.container5 .content8 {
+  position: relative; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background-color: rgb(58, 1, 47); /* Fallback color */
+  color: white; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
