@@ -1,0 +1,803 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MELA</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body style="margin-top: inherit; margin-left: 0; margin-right: 0; margin-bottom: 0">
+    
+    <style>
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .center-the-text {
+            text-align: center;
+        }
+        .black-the-text {
+            color: black;
+        }
+		
+@font-face {
+font-family: GoogleSansRegular;
+src: local("Google Sans"),
+     url('fonts/GoogleSans-Regular.woff') format('woff'),
+     url('fonts/GoogleSans-Regular.ttf') format('truetype');
+}
+        
+.googlesans {
+ font-family: GoogleSansRegular, sans-serif;
+}
+    </style>
+    
+<aside class="mdc-drawer mdc-drawer--modal">  
+   <div class="mdc-drawer__header">
+    <h3 class="mdc-drawer__title">ISTE GRIET SB</h3>
+    <h6 class="mdc-drawer__subtitle">Education. Redefined.</h6>
+  </div>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item" href="index.html" aria-selected="true">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+          <span class="mdc-list-item__text">Home</span>
+        </a>
+        <a class="mdc-list-item" href="team.html">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">group</i>
+          <span class="mdc-list-item__text">Team</span>
+        </a>
+        <a class="mdc-list-item" href="events.html">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">event</i>
+          <span class="mdc-list-item__text">Events</span>
+        </a>
+        <a class="mdc-list-item mdc-list-item--activated" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">all_out</i>
+          <span class="mdc-list-item__text">MELA</span>
+        </a>
+        <a class="mdc-list-item" href="aboutus.html">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">business</i>
+          <span class="mdc-list-item__text">About us</span>
+        </a>
+        <a class="mdc-list-item" href="contactus.html">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">perm_contact_calendar</i>
+          <span class="mdc-list-item__text">Contact us</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="mdc-drawer-scrim"></div>
+  
+  <div class="mdc-drawer-app-content">
+	  
+        <header class="mdc-top-app-bar mdc-top-app-bar--fixed" id="app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+          <a href="#" class="mdc-top-app-bar__action-item">
+      <img src="images/logos/istewhite.png" height="170%" width="170%">
+      </a>
+          <span class="mdc-top-app-bar__title googlesans">
+          ISTE GRIET SB</span>
+        </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <span class="mdc-top-app-bar__title googlesans">
+          GRIET</span>
+       <a href="griet.ac.in" class="mdc-top-app-bar__action-item">
+      	<img src="images/logos/griet1.png" height="160%" width="180%">
+      </a>
+            
+    </section>
+      </div>
+    </header>
+    
+    <main class="main-content" id="main-content">
+      <div class="mdc-top-app-bar--fixed-adjust">
+       
+       
+       
+       
+       
+       
+       
+<button class="mdc-fab" aria-label="Favorite" style="position: fixed;bottom: 50px; right: 30px; z-index: 100" onClick="toggleDiv('botapp')">
+  <span class="mdc-fab__icon material-icons">message</span>
+</button>
+      
+      <script>
+		  
+		  function toggleDiv(id) {
+    var div = document.getElementById(id);
+    div.style.display = div.style.display == "none" ? "block" : "none";
+}
+		  
+		  </script>
+      
+     <div id="botapp" style="z-index: 1000; position: fixed; bottom: 130px; right: 30px; display: none">
+		 <iframe
+    allow="microphone;"
+    width="350"
+    height="430"
+    src="https://console.dialogflow.com/api-client/demo/embedded/455e257f-fe1a-4195-b7fd-93c73d5544f1">
+</iframe>
+     </div> 
+      
+      
+      
+      
+      
+     
+   <div class="mdc-card mdc-elevation--z0">
+  <div class="mdc-card__primary-action" style="align-items: center; padding: 25px" >
+  
+  
+  
+  <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+     <button class="mdc-fab" aria-label="Left" style="padding: 8px; margin-right: 16px" id="leftMove">
+  <span class="mdc-fab__icon material-icons">fast_rewind</span>
+</button>
+  
+  <div id="getCarouselEffect">
+	  <img src="images/iste2019.jpeg" height="400" width="550"/>
+  </div>
+    
+    
+     <button class="mdc-fab" aria-label="Right" style="padding: 8px; margin-left: 16px" id="rightMove">
+  <span class="mdc-fab__icon material-icons">fast_forward</span>
+</button>
+
+
+</div>
+ 
+ 
+ <script>
+	 const arr = ["images/teamFull.JPG","images/mela2019/allevents.jpg","images/iste2019.jpeg"];
+	 
+	 var a = 0;
+	  
+	  const lefMove = document.querySelector("#leftMove");
+	  const rightMove = document.querySelector("#rightMove");
+	 const carouselPlacer = document.querySelector("#getCarouselEffect");
+	 
+	 lefMove.addEventListener('click', function() {
+		 console.log(arr[a]);
+		 carouselPlacer.innerHTML = "";
+		 carouselPlacer.innerHTML += "<img src='"+arr[a]+"' height='400' width='550'/>"
+		 a=a-1;
+		 if(a<0) {
+			 a=2;
+		 }
+	 });
+	 
+	 	 rightMove.addEventListener('click', function() {
+		 console.log(arr[a]);
+		 carouselPlacer.innerHTML = "";
+		 carouselPlacer.innerHTML += "<img src='"+arr[a]+"' height='400' width='550'/>"
+		 a = a+1;
+		 if(a>2) {
+			 a=0;
+		 }
+	 });
+	  
+	  </script>
+
+ 
+  </div>
+  	
+ 
+	  
+   	
+  <div class="googlesans center-the-text" style="font-size: 1em; padding: 32px">
+  
+  <h2 class="googlesans">MELA 2K19</h2><br>
+ISTE brought to the students, an inspiring platform to showcase the talents, and a remarkable opportunity to learn and enhance technical and creative skills all under one roof, termed MELA. Team ISTE was proud to conduct MELA, a collaborative leaning experience, exclusively to the first years, yet again, this time bigger than ever.MELA, which stands for Music, Education, Literature, Arts is a divergent experience in all the kind of activities and a taste at the skills of a student in each sector. MELA, which brags about the bringing all the students across different branches together under one umbrella, by conducting departmental and inter-departmental events for a whole day was no less than a phenomenon. <br><br>
+
+The adventure of exploring the skills and abilities of mind; The thrill of competing with the peers around and about with similar skill sets; the experience drawing immense pleasure and fun with a competitive spirit; An apt amalgam of these is definitely an experience of a lifetime.
+  
+  
+	  </div>
+   	
+<!--   </div>-->
+   
+   <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Circuit casino.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Circuit Casino</h2>
+    	<div class="center-the-text">In this event, a team of two is provided with a casino board. On whichever number the ball stops, will be the solution for the question they create. Each team or individual will be given 3 rounds. Based on the standard the participants make the questions the winners will be decided. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+   
+   
+      <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Return to void.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Return to Void</h2>
+    	<div class="center-the-text">In this event, the participant is expected to write the code for a program topic backwards, i.e., from return or getch() statement upto headers (#include..). The participant to take the least time wins the event.</div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+   
+      <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/trailblazers.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">TrailBlazer</h2>
+    	<div class="center-the-text">The main goal of this event is to get all the team members to cross over the trail board. The participant needs to choose a number to start with and answer the respective question. If correctly answered, goes to the next step. If wrongly answered, the block next to him will be a hotspot (i.e. cannot be used throughout the game). They cannot skip any block .The team to make it out in the least time wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+   
+      <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Chess code.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Chess Code</h2>
+    	<div class="center-the-text">This event is identical to chess but played with only 5 players on either teams. The two teams battle out in the game of chess by taking the positions of a Rook, Knight, Bishop, 2 pawns. Each player has to choose steps according to his role and must answer the respective question before making a move. If a player reaches a position where an opponent player is already present and wishes to kill, he must answer a question of higher difficulty. In this way, at the end of few rounds, whichever team has max number of members standing on the board wins.</div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+   
+      <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Tech Gamble.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Tech Gamble</h2>
+    	<div class="center-the-text">This is a bidding game where multiple teams , each consisting of 2 members participate. Initially one team is answering the questions displayed and is said to be on hotseat. After the team answers, the remaining teams must bid as to whether the hotseat answer is right or wrong. The team that correctly bids gains the points respective to that question and false bidding team looses the same points. The hotseat gains points if they answer correctly and looses points for wrong answer. This happens for 3 questions for each round for all the teams . Initially all teams are given an account with certain sum of points to begin with. The team with maximum points wins.</div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+   
+      <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Electrospire.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Electrospire</h2>
+    	<div class="center-the-text">In the first round, participants will be given questions and they have to answer. The hint given to each question is the answer of the before solved question. with every correct answer, they will earn virtual money. They have to buy the components such as resistors, capacitors and inductors. They have to decode them, they will gain points if answered correctly. The team with maximum points wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+   
+   
+      <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/PhysiRelay.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Physi Relay</h2>
+    	<div class="center-the-text">This event has a team participation of 3 members identical to a relay match. The 1st member of the team is given a physics question which he needs to solve correctly and tag the 2nd person on the team. The 2nd member then needs to solve a task using color coding and tags the 3rd member. The 3rd member then needs to answer a circuit question and reach the finish line, the team which reaches first wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+   
+   
+      <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Outright.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Outright</h2>
+    	<div class="center-the-text">Outright is an event where a certain code is given to the participants. The code contains blanks in it. The participants are expected to fill in the blanks with respect to the code and obtain the desired output by executing the code. These blanks are important input to get the output.  </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+   
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Force Shift.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Force Shift</h2>
+    	<div class="center-the-text">There will be a ball placed at one end of the bench. The participant should hit the ball like carrom coin and the organizer should note down the displacement and time .After giving the mass and time and displacement, the participant should calculate the force and after calculating the force participant will be given another chance where they have to reach the previous goal approximately. Whoever, makes it most approximately to the first force win. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/SIMageBuildup.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">SIMage Buildup</h2>
+    	<div class="center-the-text">In this event, a team of 2 members will initially be given the isometric half projection of an image. The team has to complete the diagram with drafter and then build it using ice cream sticks, glue. The first team to complete wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+    
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Build and blow.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Build and Blow</h2>
+    	<div class="center-the-text">In this event, participants will be given plastic cups which they have to make into pyramid using rubber bands. Then the participant will be given a balloon which they have to blow and release in such a way that the air from the balloon must knock off all the cups. The one to do it in the least time wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/BBC.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">BBC (Blow, Burst, Catch)</h2>
+    	<div class="center-the-text">In this event, the participant will be given a balloon and thermocol balls. He needs to fill the balloon with thermocol balls and blow the balloon and must burst it. When the balloon bursts, the two participants of a team must catch the thermocol balls. The team to catch the most in the given time wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Candyman.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Candyman</h2>
+    	<div class="center-the-text">It is an individual event where the participant must suck the gems from the bowl provided and then attempt to create a logo given to them. The participant to have completed the logo in the least time wins!! </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Guess the dance.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Guess the Dance</h2>
+    	<div class="center-the-text">In this event, one participant will be given headphones in which a song plays. The participant has to dance certain moves related to the song so that the other member guesses the song being played. The team to guess all the songs right wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Ping Pong Bash.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Ping Pong Bash</h2>
+    	<div class="center-the-text">Round 1: This round is played only by 1st participant of the team. The participant has to place the given Ping Pong balls in the cups filled with water. After he is able to place all the balls in the cups. Round 2 starts.
+<br><br>
+Round 2: This round is played only by the 2nd member. In this round, an inclination will be provided on which cardboard pockets will be fixed. The participant has to place a ping Pong ball on the incline board and blow the Ping Pong balls in such a way that they go and settle into the pockets. There will 6 pockets for 6 ping Pong balls. The person to send all the ping Pong balls into the pockets. The overall time for the two round is noted and the least time team wins!!! </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Twist Up.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Twist Up</h2>
+    	<div class="center-the-text">The floor is numbered. The organizer commands a participant on what number he needs to place his hands and legs ( Eg: right leg on 4..). The participant has to at least be on 4 numbers at any instant. The participant cannot trip or fall from the number position. The person to stay on longest wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+   
+      <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Sherlock.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Sherlock</h2>
+    	<div class="center-the-text">IAn interesting campus murder story will be created. We will have multiple participating teams. We will leave clues tracking back to the murder in the room. The clues should lead to witnesses ( volunteers should be asked to role play) and the one who finds the real murderer first wins. We will have a back story and leave clues all around the room along with dummies acting as dead bodies and have volunteers act as witnesses. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Maze Runner.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Maze Runner</h2>
+    	<div class="center-the-text">We will be setting up a maze in a dark room. One person will be blindfolded and the other person will be directing the other only with sounds/codes. They should cross all the obstacles and reach the destination. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Nodnod.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Nod Nod</h2>
+    	<div class="center-the-text">An individual will be asked random questions. The individual can only answer YES while nodding as NO and say NO while nodding as YES. The individual to answer maximum questions wins the game. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Radium Cricket.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Radium Cricket</h2>
+    	<div class="center-the-text">This is a cricket game played by two teams with five members each. This game is played with radium ball in a dark room. Each team will be given 4 overs to complete the match.  </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Script Writing.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Script Writing</h2>
+    	<div class="center-the-text">A random sentence or line of story will be provided using which the participant is supposed to make a story with genre of their choice. The best story wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Togather.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">To Gather</h2>
+    	<div class="center-the-text">The team in this event will be given a news topic. They will also be provided with newspapers. The team has to search for the related pictures and news among the newspapers, cut them out and paste them together onto the chart paper. The team to do most of the gathering and provide information in the given time wins.</div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Helium Talks.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Helium Talks</h2>
+    	<div class="center-the-text">In this event, the participant will be given a big word, from which he should create small words and write them down. After inhaling Helium Gas, the participant should read all the words written. Whoever speaks out maximum words will be the winner. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Join the genre.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Join the Genre</h2>
+    	<div class="center-the-text">The team of participants must sit in a circle. Initially the 1st person makes a statement belonging to a particular genre. The next person has to continue with a statement of another genre. All of the participants must keep altering the genre. If anyone falters they are out, the last person standing wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Irrelevant Answers.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Irrelevant Answers</h2>
+    	<div class="center-the-text">The participants will be playing some ball game and simultaneously they will be asked questions. They will have to give irrelevant answers to the questions asked. The participant to answer most irrelevantly in the given time wins. </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Rangoli.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Rangoli</h2>
+
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Doodle Balloon.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Doodle Balloon</h2>
+    	<div class="center-the-text">The participant will be given a balloon. He should blow the balloon and then draw a doodle on the balloon without bursting it. The best doodle wins!!  </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+   
+      <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/Bulb Painting.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Bulb Painting</h2>
+    	<div class="center-the-text">The participant will be given a bulb upon which he has to paint. The bulb when lighted reflects the paint on the bulb. The best bulb paint wins!  </div>
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+       <div class="mdc-card mdc-elevation--z12" style="margin: 16px">
+	   <div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell--span-3"><img src="images/mela2019/NailArt.jpeg" height="400em" width="300em"></div>
+    <div class="mdc-layout-grid__cell--span-9">
+    <div class="mdc-card" style="width: 100%; height: 100%; padding: 20px">
+    	<h2 class="googlesans center-the-text">Nail Art</h2>
+
+    </div>
+    </div>
+  </div>
+</div>
+   </div>
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   <style>
+		  
+		  
+.footer {
+    background-color: #f1f3f4;
+    margin: 0;
+    padding: 0;
+	display: block;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+
+}
+
+.footer-block {
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+@media screen and (min-width: 921px) {
+    .footer-block {
+        -ms-flex-wrap:nowrap;
+        flex-wrap: nowrap
+    }
+}
+
+.footer-block--about {
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    padding: 32px 0
+}
+
+@media screen and (min-width: 921px) {
+    .footer-block--about {
+        padding-top:48px
+    }
+}
+
+.footer-block--legal {
+    padding: 32px 0
+}
+
+.footer-block__logo {
+    margin-bottom: 16px;
+    margin-right: 32px
+}
+
+@media screen and (min-width: 921px) {
+    .footer-block__logo {
+        margin-bottom:0
+    }
+}
+
+.footer-block__material-logo {
+    height: 64px;
+    width: 64px
+}
+
+.footer-block__google-logo {
+	height: 50px; width: 50px;
+	margin-left: 30px
+}
+
+.footer-block--legal .footer-block__content {
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%
+}
+
+@media screen and (min-width: 921px) {
+    .footer-block--legal .footer-block__content {
+        -ms-flex-negative:1;
+        flex-shrink: 1
+    }
+}
+
+.footer-block__description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 32px
+}
+
+@media screen and (min-width: 921px) {
+    .footer-block__description {
+        max-width:50%
+    }
+}
+
+
+@media screen and (min-width: 921px) {
+    .footer-block__legal-nav-item {
+        display:inline-block
+    }
+
+    .footer-block__legal-nav-item:not(:first-child) {
+        margin-left: 16px
+    }
+}
+
+
+		  </style>
+   
+   <footer class="footer">
+  <div class="container container--jumbo anim-appear">
+	  
+
+    <div class="footer-block footer-block--legal">
+      <a class="footer-block__logo js-analytics-click" href="http://iste.griet.ac.in">
+        <img class="footer-block__google-logo" src="images/logos/iste1.jpg" alt="ISTE Logo">
+      </a>
+      <div class="footer-block__content">
+        <ul class="footer-block__legal-nav">
+          <li class="footer-block__legal-nav-item">Maintained by ISTE GRIET SB Webmaster (P Nani)</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+		  
+		  
+		  
+		  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+		  </div>
+    
+      </div>
+    </main>
+  </div>
+  
+  
+  
+    <script>
+		mdc.autoInit();
+		
+	const drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('#app-bar'));
+topAppBar.listen('MDCTopAppBar:nav', () => {
+  drawer.open = !drawer.open;
+});
+	</script>
+	
+	
+	
+</body>
+
+</html>
